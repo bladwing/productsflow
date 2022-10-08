@@ -94,9 +94,11 @@ If you need to start my project on your computer, you need to done several steps
 
 React App :atom:
 
+Run in [Git bush](https://git-scm.com/downloads):
+
 ```
-git clone git@github.com:bladwing/ProductList.git
-cd ProductList
+git clone git@github.com:bladwing/productsflow.git
+cd productsflow/FrontEnd
 npm i
 npm start
 
@@ -106,46 +108,34 @@ localhost:3000
 
 Node Server :electron:
 
+Run in another Git bush window:
+
 ```
-git clone git@github.com:bladwing/nodecrudapi.git
-cd nodecrudapi
+
+cd nproductsflow/BackEnd
 npm i
 npm start
 
 localhost:5000
 ```
 
-
- - **Replace API address in tree components:**
-
-
-ProductList/src/components/addProduct.jsx <br/> ProductList/src/components/editProduct.jsx <br/>ProductList/src/components/productList.jsx
-
 - **Create mySQL server**
 
 I using [XAMPP ](https://www.apachefriends.org/index.html) development environment
 
-- **Replace connection parametrs in NODE server**
+- **If you use outside or another mySql server -> Check connection parametrs in NODE server**
 
 ```
-nodecrudapi/config/database.js
+BackEnd/config/database.js
 ```
 
-- **Create in phpMyAdmin panel table with name - products**
-- **Import database from file products.sql to your table - products** 
+- **Create in phpMyAdmin panel table with name - productflow**
+- **Import database from file product_flow.sql to your table -> productflow** 
 - **Enjoy Life.**
 
 
 
 --- 
-
-### QA test is done.
-
-![](https://i.imgur.com/O1f3tiJ.png)
-
-
-
-
 
 ### Thank you for your attention! :high_brightness: 
 
