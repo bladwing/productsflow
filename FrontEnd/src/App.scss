@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  min-height: 650px;
+  img {
+    width: 20%;
+   
+  }
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+  .footer {
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+  }
+}
+.TopContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  margin: 0 auto;
+  .ButtonContainer {
+    margin-bottom: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+  .PageTitle {
+    color: #000;
+    margin-top: 20px;
+  }
+}
+
+.PageNotFoundContainer {
+    min-height: 600px;
+    margin-top: 10%;
+}

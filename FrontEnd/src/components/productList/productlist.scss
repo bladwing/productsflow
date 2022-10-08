@@ -1,0 +1,78 @@
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Kanit', sans-serif;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  justify-content: space-around;
+  margin: 10px auto;
+  width: 90%;
+  min-width: 320px;
+  min-height: 620px;
+  padding-bottom: 2%;
+  .listEmptyContainer {
+    margin: 10% auto;
+    background-color: #fff;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+
+    img {
+      width: 50%;
+    }
+    h3 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+  }
+  .productCard {
+    width: 200px;
+    height: 250px;
+    min-height: 150px;
+    background-color: #fff;
+    margin-top: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border-radius: 10px;
+    .cardSpecifications {
+      height: 70px;
+    }
+    .cardItem {
+      margin-top: 17px;
+      .delete-checkbox {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.productCard:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 2px 4px 0px,
+    rgba(3, 102, 214, 0.3) 0px 2px 16px 0px;
+}
+
+.loader-container {
+  width: 71%;
+  margin-top: 13%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
