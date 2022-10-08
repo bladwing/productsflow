@@ -7,7 +7,7 @@ const db = new Sequelize("productflow", "root", "", {
 db
   .authenticate()
   .then(() => {
-    console.log('You are connected to my.cloud9.ge mySQL database.');
+    console.log('You are connected to mySQL database.');
   })
   .catch(err => {
     console.error('Unable to connect to the database:', err);
