@@ -114,7 +114,7 @@ Run in another Git bush window:
 
 cd nproductsflow/BackEnd
 npm i
-npm start
+npx nodemon
 
 localhost:5000
 ```
