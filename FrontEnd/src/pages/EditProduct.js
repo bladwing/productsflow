@@ -2,10 +2,10 @@ import EditProduct from "../components/editProduct/EditProduct";
 
 const EditProductPage = () => {
   return (
-    <div>
+    <Fragment>
       <h4>Edit Product</h4>
       <EditProduct />
-    </div>
+    </Fragment>
   );
 };
 

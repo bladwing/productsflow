@@ -1,10 +1,11 @@
+import { Fragment } from "react";
 import ProductList from "../components/productList/ProductList";
 
 const Products = () => {
   return (
-    <div>
+    <Fragment>
       <ProductList />
-    </div>
+    </Fragment>
   );
 };
 
