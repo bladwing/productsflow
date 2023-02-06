@@ -1,5 +1,5 @@
 import { BrowserRouter, Link } from "react-router-dom";
-import RouterComponent from "./components/Router"
+import RouterComponent from "./components/Router";
 import Footer from "./components/footer";
 
 import "./App.scss";
@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Link to="/">
-          <img src="./img/logo.png" alt="logo" />
+          <img src="/img/logo.png" alt="logo" />
         </Link>
-        <RouterComponent/>
+        <RouterComponent />
       </BrowserRouter>
       <Footer />
     </div>

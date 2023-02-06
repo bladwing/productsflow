@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import EditProduct from "../components/editProduct/EditProduct";
 
 const EditProductPage = () => {
