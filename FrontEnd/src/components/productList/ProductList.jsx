@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { API } from "../../utils/api";
 
 import "./productlist.scss";
 
@@ -15,20 +16,16 @@ export default function ProductList() {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get(
-      "http://localhost:5000/products"
-    );
+    const response = await axios.get(API + "/products");
     setLoading(false);
     setProducts(response.data);
   };
 
   const deleteProduct = async (id) => {
     setLoading(true);
-    await axios
-      .delete(`http://localhost:5000/products/delteById/${id}`)
-      .then(function () {
-        getProducts();
-      });
+    await axios.delete(API + `/products/delteById/${id}`).then(function () {
+      getProducts();
+    });
   };
 
   const deleteProductsByIds = () => {
@@ -40,13 +37,9 @@ export default function ProductList() {
     });
     ids.length === 0
       ? console.log("Have no one selected Product")
-      : axios
-          .delete(
-            `http://localhost:5000/products/deleteByIds/${ids}`
-          )
-          .then(() => {
-            getProducts();
-          });
+      : axios.delete(API + `/products/deleteByIds/${ids}`).then(() => {
+          getProducts();
+        });
   };
 
   return (

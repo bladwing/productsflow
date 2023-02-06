@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API } from "../../utils/api";
+
 
 const EditProduct = () => {
   const [name, setName] = useState("");
@@ -19,7 +21,7 @@ const EditProduct = () => {
     getProductById();
     async function getProductById() {
       const response = await axios.get(
-        `http://localhost:5000/products/${id}`
+        API + `/products/${id}`
       );
       setName(response.data.name);
       setPrice(response.data.price);
@@ -34,7 +36,7 @@ const EditProduct = () => {
 
   const updateProduct = async (e) => {
     e.preventDefault();
-    await axios.patch(`http://localhost:5000/products/${id}`, {
+    await axios.patch(API + `/products/${id}`, {
       name: name,
       price: price,
       size: size,

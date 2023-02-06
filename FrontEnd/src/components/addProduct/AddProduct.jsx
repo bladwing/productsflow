@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { API } from "../../utils/api";
 
 import "./addProducts.scss";
 
@@ -31,7 +32,7 @@ export default function AddProduct() {
   }, []);
 
   const GetProducts = async () => {
-    const response = await axios.get("http://localhost:5000/products");
+    const response = await axios.get(API + "/products");
     setProducts(response.data);
   };
 
@@ -56,7 +57,7 @@ export default function AddProduct() {
         setdimensionsError(false)
         
       : await axios
-          .post("http://localhost:5000/products", inputs)
+          .post(API +"/products", inputs)
           .then(function () {
             setError("");
             setSku("");
